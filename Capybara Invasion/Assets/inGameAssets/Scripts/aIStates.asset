@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 391b51114c7873d4db8b5a84922a248c, type: 3}
+  m_Name: aIStates
+  m_EditorClassIdentifier: 
+  namespace: 
+  usingNamespaces:
+  - UnityEngine
+  - System.Collections.Generic
+  typeList:
+    references:
+    - {fileID: 8902207443137015562}
+  scriptData:
+    fileName: aIStates
+    selfTypeData:
+      typeName: 
+      reference: {fileID: 0}
+    typeDatas: []
+    debug: 0
+    debugValueNode: 1
+    compileToScript: 1
+    unityObjects: []
+--- !u!114 &8902207443137015562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a7b0cfd6695934697da516187a2c65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  summary: 
+  modifier:
+    Public: 1
+    Private: 0
+    Protected: 0
+    Internal: 0
+  enumerators:
+  - id: 600fedd97868db3a
+    name: idle
+  - id: 33ea4db64e87301
+    name: 'patrol '
+  - id: 6c2a3251b54e13a
+    name: sight
+  - id: 49d67fe478f9e02c
+    name: attack
+  - id: 519b9ae8288967ea
+    name: dead
+  attributes: []
+  scriptTypeData:
+    scriptGraphReference: {fileID: 11400000}
+    typeName: 
+  scriptData:
+    fileName: 
+    selfTypeData:
+      typeName: aIStates
+      reference: {fileID: 0}
+    typeDatas: []
+    debug: 0
+    debugValueNode: 1
+    compileToScript: 1
+    unityObjects: []
