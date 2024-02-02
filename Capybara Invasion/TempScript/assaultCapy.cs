@@ -26,16 +26,27 @@ public class EnemyScript : MonoBehaviour {
 	[SerializeField]
 	[Tooltip("Check if the player has been spotted")]
 	private bool seePlayer;
+	private Vector3 Heading;
+	private Vector3 Direction;
+	private Vector3 Move;
+	private float Distance;
 	
 	private void Start() {
 		Speed = maxSpeed;
 	}
 	
-	private void Update() {
-		Vector3 Heading = default(Vector3);
-		float Distance = default(float);
-		Vector3 Direction = default(Vector3);
-		Vector3 Move = default(Vector3);
+	private void OnDrawGizmos() {
+		Gizmos.color = Color.red;
+		Gizmos.DrawWireSphere(this.transform.position, detectionRange);
+		Gizmos.color = new Color() { r = 0.1573993F, g = 1F, a = 1F };
+		Gizmos.DrawLine(this.transform.position, Vector3.ClampMagnitude((Target.transform.position - this.transform.position), sightRange));
+	}
+	
+	private void FixedUpdate() {
+		ChasePlayer();
+	}
+	
+	public void ChasePlayer() {
 		if(!(seePlayer)) {
 			hitColliders = Physics.OverlapSphere(this.transform.position, detectionRange);
 			foreach(Collider loopValue in hitColliders) {
@@ -59,19 +70,6 @@ public class EnemyScript : MonoBehaviour {
 				rb.velocity = Move;
 				this.transform.forward = Move;
 			}
-		}
-	}
-	
-	private void OnDrawGizmos() {
-		Gizmos.color = Color.red;
-		Gizmos.DrawWireSphere(this.transform.position, detectionRange);
-		Gizmos.color = new Color() { r = 0.1573993F, g = 1F, a = 1F };
-		Gizmos.DrawLine(this.transform.position, Vector3.ClampMagnitude((Target.transform.position - this.transform.position), sightRange));
-	}
-	
-	private void OnTriggerEnter2D(Collider2D colliderInfo) {
-		if(colliderInfo.gameObject.CompareTag("Player")) {
-			Target.GetComponent<cowsins.PlayerStats>().Damage(20F);
 		}
 	}
 }

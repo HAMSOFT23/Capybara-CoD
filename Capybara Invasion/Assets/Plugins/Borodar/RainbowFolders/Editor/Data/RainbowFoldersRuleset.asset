@@ -221,13 +221,13 @@ MonoBehaviour:
     Key: Shaders
     Ordinal: 17
     Priority: 0
-    IconType: 2170
+    IconType: 2670
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
-    IsIconRecursive: 0
-    BackgroundType: 0
+    IsIconRecursive: 1
+    BackgroundType: 70
     BackgroundTexture: {fileID: 0}
-    IsBackgroundRecursive: 0
+    IsBackgroundRecursive: 1
     IsHidden: 0
   - Type: 0
     Key: Terrains
@@ -245,13 +245,13 @@ MonoBehaviour:
     Key: Textures
     Ordinal: 19
     Priority: 0
-    IconType: 2190
+    IconType: 2690
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
-    IsIconRecursive: 0
-    BackgroundType: 0
+    IsIconRecursive: 1
+    BackgroundType: 20
     BackgroundTexture: {fileID: 0}
-    IsBackgroundRecursive: 0
+    IsBackgroundRecursive: 1
     IsHidden: 0
   - Type: 0
     Key: Physics
@@ -418,6 +418,30 @@ MonoBehaviour:
     LargeIcon: {fileID: 0}
     IsIconRecursive: 1
     BackgroundType: 80
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 1
+    IsHidden: 0
+  - Type: 1
+    Key: Assets/inGameAssets/Post-Processing
+    Ordinal: 34
+    Priority: 0
+    IconType: 10
+    SmallIcon: {fileID: 0}
+    LargeIcon: {fileID: 0}
+    IsIconRecursive: 1
+    BackgroundType: 70
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 1
+    IsHidden: 0
+  - Type: 1
+    Key: Assets/inGameAssets/Models
+    Ordinal: 35
+    Priority: 0
+    IconType: 2690
+    SmallIcon: {fileID: 0}
+    LargeIcon: {fileID: 0}
+    IsIconRecursive: 1
+    BackgroundType: 20
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 1
     IsHidden: 0

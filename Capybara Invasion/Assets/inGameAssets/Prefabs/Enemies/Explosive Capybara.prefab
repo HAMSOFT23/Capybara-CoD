@@ -17,8 +17,9 @@ GameObject:
   - component: {fileID: 5063109001463272451}
   - component: {fileID: 6906306789798459888}
   - component: {fileID: 405341406485663254}
+  - component: {fileID: 8991524158876773368}
   m_Layer: 7
-  m_Name: CapyFather
+  m_Name: Explosive Capybara
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,8 +89,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.3280599, z: 1}
-  m_Center: {x: 0, y: 0.8682221, z: 0}
+  m_Size: {x: 1, y: 1.2723186, z: 1.2741727}
+  m_Center: {x: 1.5582657e-10, y: 0.89611685, z: 0.06566947}
 --- !u!135 &181249108543793371
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -142,14 +143,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 30
-  explosionFX: {fileID: 0}
-  explosionVolume: 0
+  explosionFX: {fileID: 8300000, guid: c9868a87a04bbad4e93d52522164c27e, type: 3}
+  explosionVolume: 3
   hasExploded: 0
-  deleteTime: 0
-  shakeForce: 0
-  capyTexture: {fileID: 0}
-  capyHelmet: {fileID: 0}
-  bigExplosion: {fileID: 0}
+  deleteTime: 4
+  shakeForce: 2
+  capyTexture: {fileID: 2139128136170424355}
+  capyHelmet: {fileID: 3911019679935208020}
+  bigExplosion: {fileID: 6209362022947662880}
   camera: {fileID: 0}
 --- !u!114 &5063109001463272451
 MonoBehaviour:
@@ -215,7 +216,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c9868a87a04bbad4e93d52522164c27e, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -225,8 +226,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 6.5502186
+  MaxDistance: 96.73843
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -301,6 +302,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8991524158876773368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138178582883821600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6fa0252832394149bd9e2c0cf891e9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  states: 0
+  list:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  newVariable: {fileID: 0}
 --- !u!1001 &1256183673128383858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -367,6 +387,11 @@ PrefabInstance:
 --- !u!4 &1649554518750991001 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5c582953307ea53449a0dc4e52e7b9cb, type: 3}
+  m_PrefabInstance: {fileID: 1256183673128383858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2139128136170424355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5c582953307ea53449a0dc4e52e7b9cb, type: 3}
   m_PrefabInstance: {fileID: 1256183673128383858}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4217571008356591365
@@ -454,6 +479,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d9b9162fcb33a841a7f6e0b284fc3bf, type: 3}
+--- !u!1 &3911019679935208020 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d9b9162fcb33a841a7f6e0b284fc3bf, type: 3}
+  m_PrefabInstance: {fileID: 4217571008356591365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4399290067188302062 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9d9b9162fcb33a841a7f6e0b284fc3bf, type: 3}
@@ -563,5 +593,10 @@ PrefabInstance:
 --- !u!4 &6206432672449636670 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010212820824, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
+  m_PrefabInstance: {fileID: 6210349936776080998}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6209362022947662880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
   m_PrefabInstance: {fileID: 6210349936776080998}
   m_PrefabAsset: {fileID: 0}
