@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using cowsins;
 
 public class faceTowardsTarget : MonoBehaviour {	
 	[SerializeField]
@@ -10,6 +11,10 @@ public class faceTowardsTarget : MonoBehaviour {
 	[SerializeField]
 	[Tooltip("Looking Speed")]
 	private float speed;
+	
+	private void Awake() {
+		target = GameObject.FindGameObjectWithTag("Player").transform;
+	}
 	
 	private void Update() {
 		Vector3 targetDirection = default(Vector3);

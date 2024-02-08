@@ -69,7 +69,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 68
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!65 &7120323306312146447
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -89,8 +89,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.2723186, z: 1.2741727}
-  m_Center: {x: 1.5582657e-10, y: 0.89611685, z: 0.06566947}
+  m_Size: {x: 0.55, y: 1.1780025, z: 1.2741727}
+  m_Center: {x: 1.5582657e-10, y: 0.8489639, z: 0.06566947}
 --- !u!135 &181249108543793371
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -143,15 +143,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 30
-  explosionFX: {fileID: 8300000, guid: c9868a87a04bbad4e93d52522164c27e, type: 3}
-  explosionVolume: 3
-  hasExploded: 0
-  deleteTime: 4
+  deleteTime: 1.2
   shakeForce: 2
+  hasExploded: 0
+  explosionSFX: {fileID: 8300000, guid: c9868a87a04bbad4e93d52522164c27e, type: 3}
+  explosionVolume: 3
   capyTexture: {fileID: 2139128136170424355}
   capyHelmet: {fileID: 3911019679935208020}
   bigExplosion: {fileID: 6209362022947662880}
   camera: {fileID: 0}
+  glitchBlock: 0.4
+  glitchDrift: 0.3
+  glitchJitter: 0.2
 --- !u!114 &5063109001463272451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,7 +189,7 @@ MonoBehaviour:
   healthSlider: {fileID: 0}
   shieldSlider: {fileID: 0}
   showUI: 0
-  showKillFeed: 0
+  showKillFeed: 1
   damagePopUp: {fileID: 0}
   shieldColor: {r: 0, g: 0, b: 0, a: 0}
   healthColor: {r: 0, g: 0, b: 0, a: 0}
